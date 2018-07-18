@@ -38,6 +38,9 @@ public class SingerService {
 
         ParsedStringTerms aggregation = (ParsedStringTerms) aggMap.get("genders");
         Iterator<? extends Terms.Bucket> iterator = aggregation.getBuckets().iterator();
+        List singer_num = new ArrayList();
+        List song_num = new ArrayList();
+        List country = new ArrayList();
         while (iterator.hasNext()){
             Terms.Bucket next = iterator.next();
             String keyAsString = next.getKeyAsString();
@@ -46,10 +49,17 @@ public class SingerService {
             long value = cardinality1.getValue();
 
             Map<String,Object> stringObjectMap1 = new HashMap<String,Object>();
-            stringObjectMap1.put("singer_num",value);
-            stringObjectMap1.put("song_num",next.getDocCount());
-            stringObjectMap.put(keyAsString.trim().equals("")?"未知地区":keyAsString,stringObjectMap1);
+
+            singer_num.add(value);
+            song_num.add(next.getDocCount());
+            country.add(keyAsString.trim().equals("")?"未知地区":keyAsString);
+
+
         }
+
+        stringObjectMap.put("singer_num",singer_num);
+        stringObjectMap.put("song_num",song_num);
+        stringObjectMap.put("country",country);
         System.out.println(stringObjectMap);
         return stringObjectMap;
     }
