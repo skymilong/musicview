@@ -1,5 +1,6 @@
 function getSingersInfo() {
     var mychart = echarts.init(document.getElementById('singerview'));
+
     mychart.setOption({
         title:{
             text:"地区分布统计"
