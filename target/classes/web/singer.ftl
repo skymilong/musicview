@@ -3,8 +3,6 @@
 <head>
     <title>歌手统计</title>
     <link rel="stylesheet" href="${path}/static/layui/css/layui.css"  media="all">
-    <script src="${path}/static/jquery-3.3.1.min.js"></script>
-    <script src="${path}/static/echarts/echarts.js"></script>
 </head>
 
 <body>
@@ -19,22 +17,17 @@
             <div class="layui-card">
                 <div class="layui-card-header">歌手区域分布情况</div>
                 <div class="layui-card-body">
-                    <div id="singerview" style="width: 800px;height:600px;"></div>
+
                 </div>
             </div>
         </div>
 
     </div>
 </div>
-<script src="${path}\static\echarts\singer.js" charset="utf-8"></script>
+
 <script src="${path}\static\layui\layui.js" charset="utf-8"></script>
 <!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
 <script>
-    $(function(){
-        getSingersInfo();
-    })
-
-</script>
 </body>
 
 </html>
