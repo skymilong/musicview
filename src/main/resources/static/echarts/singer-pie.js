@@ -44,6 +44,10 @@ function getSongInfo_pie(){
                 }
             ]
         });
+
+    });
+    window.addEventListener('resize', function () {
+        mychart.resize();
     });
 
 }

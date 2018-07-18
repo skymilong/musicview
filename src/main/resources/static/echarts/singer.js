@@ -26,7 +26,9 @@ function getSingersInfo() {
         }
         ]
     }) ;
-
+    window.addEventListener('resize', function () {
+        mychart.resize();
+    });
     // 异步加载数据
     $.get('singerinfo').done(function (data) {
        mychart.setOption({
