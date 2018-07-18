@@ -27,7 +27,6 @@ hs_err_pid*
 
 .gitignore
 src/main/resources/templates/
-src/main/resources/static/
 src/main/resources/static/layui/
 target/generated-sources/
 target/generated-test-sources/
