@@ -30,3 +30,4 @@ src/main/resources/static/
 src/main/resources/static/layui/
 target/generated-sources/
 target/generated-test-sources/
+target/classes/
