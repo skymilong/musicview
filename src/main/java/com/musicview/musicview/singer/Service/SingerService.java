@@ -23,6 +23,7 @@ public class SingerService {
     @Autowired
     private ESClient esClient;
 
+
     public Map<String,Object> getSingerAdd() throws IOException {
         RestHighLevelClient client = esClient.getClient();
 
@@ -53,7 +54,6 @@ public class SingerService {
             singer_num.add(value);
             song_num.add(next.getDocCount());
             country.add(keyAsString.trim().equals("")?"未知地区":keyAsString);
-
 
         }
 
